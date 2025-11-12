@@ -16,15 +16,16 @@ using System.Windows.Shapes;
 namespace балахнин41
 {
     /// <summary>
-    /// Логика взаимодействия для Product.xaml
+    /// Логика взаимодействия для ProductPage.xaml
     /// </summary>
-    public partial class Product : Page
+    public partial class ProductPage : Page
     {
-        public Product()
+        public ProductPage()
         {
             InitializeComponent();
+            var currentProduct = Balahnin_41Entities.GetContext().Product.ToList();
+            ProductListView.ItemsSource = currentProduct;
         }
-
         private void ButtonClick(object sender, RoutedEventArgs e)
         {
             Manager.MainFrame.Navigate(new AddPage());

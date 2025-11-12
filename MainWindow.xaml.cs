@@ -23,7 +23,7 @@ namespace балахнин41
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new Product());
+            MainFrame.Navigate(new ProductPage());
             Manager.MainFrame = MainFrame;
         }
 

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:балахнин41"
         mc:Ignorable="d"
-        Title="41 Размер" Height="450" Width="800" FontFamily="Comic Sans MS" Icon="image/icon.ico">
+        Title="OOO 41 Размер" Height="700" Width="1200" FontFamily="Comic Sans MS" Icon="image/icon.ico">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>

@@ -9,7 +9,7 @@
       Title="AddPage" FontFamily="Comic Sans MS">
 
     <Grid>
-        <TextBlock Text="hello" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" ></TextBlock>
+       
         
     </Grid>
 </Page>
