@@ -64,10 +64,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="balahnin_41.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>balahnin_41.Context.tt</DependentUpon>
+    </Compile>
     <Compile Include="balahnin_41.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>balahnin_41.tt</DependentUpon>
+    </Compile>
+    <Compile Include="balahnin_41.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>balahnin_41.edmx</DependentUpon>
     </Compile>
     <Compile Include="Order.cs">
       <DependentUpon>balahnin_41.tt</DependentUpon>
@@ -105,16 +115,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="balahnin_41.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>balahnin_41.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="balahnin_41.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>balahnin_41.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Class.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -147,6 +147,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>balahnin_41.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="App.Config" />
     <None Include="balahnin_41.edmx.diagram">
       <DependentUpon>balahnin_41.edmx</DependentUpon>
     </None>
@@ -157,24 +158,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="image\icon.ico" />
     <Resource Include="image\logo.png" />
     <Resource Include="image\picture.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="balahnin_41.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>balahnin_41.Context.cs</LastGenOutput>
-      <DependentUpon>balahnin_41.edmx</DependentUpon>
-    </Content>
-    <Content Include="balahnin_41.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>balahnin_41.edmx</DependentUpon>
-      <LastGenOutput>balahnin_41.cs</LastGenOutput>
-    </Content>
     <Resource Include="Product_imag\picture.png" />
     <Resource Include="Product_imag\B320R5.jpg" />
     <Resource Include="Product_imag\D329H3.jpg" />
@@ -189,6 +177,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="balahnin_41.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>balahnin_41.edmx</DependentUpon>
+      <LastGenOutput>balahnin_41.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="balahnin_41.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>balahnin_41.edmx</DependentUpon>
+      <LastGenOutput>balahnin_41.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

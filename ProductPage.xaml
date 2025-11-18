@@ -5,15 +5,65 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:балахнин41"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="700" d:DesignWidth="1200"
       Title="ProductPage" FontFamily="Comic Sans MS">
 
-    <Grid>
+    <Grid RenderTransformOrigin="0.606,0.457" Margin="0,10,0,0">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="-0.114"/>
+                <TranslateTransform X="-0.039" Y="-0.168"/>
+            </TransformGroup>
+        </Grid.RenderTransform>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition />
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <ListView Name="ProductListView">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="CountTextBlock" 
+                   
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Left" 
+                   Margin="8,101,0,0" 
+                   FontSize="15" 
+                   Width="125">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1" ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-180.164"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <WrapPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left" Width="302"  Margin="96,84,0,3">
+            <StackPanel Orientation="Vertical" Height="55" Width="314">
+                <TextBlock Text="Введите название для поиска" TextAlignment="Left" Width="200" FontSize="13" Height="22"/>
+                <TextBox x:Name="TBoxSearch" TextChanged="TBoxSearch_TextChanged"  Width="200" FontSize="15" Height="23" />
+            </StackPanel>
+        </WrapPanel>
+        <WrapPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right" Width="237" Margin="0,72,45,22" >
+            <StackPanel  Width="250" Height="58"  VerticalAlignment="Center" HorizontalAlignment="Center" >
+                <TextBlock Text="Выберите название для поиска" TextAlignment="Center" Width="242" FontSize="15" Height="25"/>
+                <ComboBox x:Name="ComboType" SelectionChanged="ComboType_SelectionChanged" Width="219" FontSize="15"  Height="25">
+                    <TextBlock><Run Text="Все"/></TextBlock>
+                    <TextBlock><Run Text="от 0 до 9,99%"/></TextBlock>
+                    <TextBlock><Run Text="от 10 до 14,99%"/></TextBlock>
+                    <TextBlock><Run Text="от 15% и более"/></TextBlock>
+                </ComboBox>
+            </StackPanel>
+        </WrapPanel>
+        <StackPanel Grid.Row="0" Orientation="Vertical" Margin="469,86,423,21" >
+            <RadioButton Content="По возврастанию стоимости" GroupName="Sort" Width="235" FontSize="15" Checked="RButtonUp_Checked" x:Name="RButtonUp" />
+            <RadioButton Content="По убыванию стоимости" GroupName="Sort" Width="235" FontSize="15" Checked="RButtonDown_Checked" x:Name="RButtonDown" RenderTransformOrigin="0.504,0.563" />
+        </StackPanel>
+        <ListView Name="ProductListView" Grid.Row="1" Margin="-2,0,2,19" Grid.RowSpan="2">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -21,7 +71,7 @@
                             <ColumnDefinition></ColumnDefinition>
                             <ColumnDefinition Width="800"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
-                      
+
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="50"/>

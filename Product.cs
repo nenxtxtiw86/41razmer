@@ -11,7 +11,8 @@ namespace балахнин41
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Runtime.Remoting.Messaging;
+
     public partial class Product
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -32,16 +33,14 @@ namespace балахнин41
         public int ProductQuantityInStock { get; set; }
         public string ProductDescription { get; set; }
         public string ProductPhoto { get; set; }
-
-        public string ProductPhotoPath { 
-            get
+        public string ProductPhotoPath { get
             {
-                if (ProductPhoto == null)
+                if(ProductPhoto == null)
                     return null;
                 return "Product_imag/" + ProductPhoto;
             }
         }
-
+   
         public string ProductStatus { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
